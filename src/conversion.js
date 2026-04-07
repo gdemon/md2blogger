@@ -4,7 +4,7 @@ import fs from "fs";
 import yaml from "js-yaml";
 import imageBase64Conversion from "./imageBase64Conversion.js";
 
-const metadataExtractor = /(---\n)(.+?)(---\n)/s;
+const metadataExtractor = /(---\r?\n)(.+?)(---\r?\n)/s;
 
 const replaceImagesWithBase64 = function(html, images) {
     for(let i=0; i < images.length; i++) {
