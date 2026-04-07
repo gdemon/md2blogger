@@ -1,5 +1,8 @@
 # md2blogger
 
+## Purpose of Fork
+This fork was created to address a critical vulnerability (17 vulnerabilities in total, including 1 critical) and update dependencies to ensure the security and stability of the tool.
+
 md2blogger is a CLI tool that helps the maintanence of a blog hosted in [Blogger service](https://www.blogger.com/).
 
 You can store yout blog posts in the [markdown](https://www.markdownguide.org/) format and leave to md2blogger the burden of converting them to HTML and posting them to your blog.
