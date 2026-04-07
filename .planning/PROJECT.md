@@ -1,5 +1,8 @@
 # Project: md2blogger Vulnerability Fix
 
+## Purpose of Fork
+This fork was created to address a critical vulnerability and update dependencies to ensure the security and stability of the tool.
+
 ## Context
 A CLI tool that helps the maintenance of a blog hosted on Blogger.
 The project currently reports vulnerabilities during `npm install`.
