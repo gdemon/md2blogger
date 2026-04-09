@@ -1,16 +1,16 @@
-# Requirements: Vulnerability Fix
+# Requirements: Resolve tmp Vulnerability
 
 ## Functional Requirements
-- Resolve the 17 vulnerabilities (7 low, 4 moderate, 5 high, 1 critical) reported by the user.
-- Reconcile the report discrepancy (ensure all reported issues are addressed even if not currently visible).
-- Maintain CLI functionality: blogging, conversion, image processing, authentication.
+- Resolve the 4 low-severity vulnerabilities (transitive `tmp` vulnerability) reported by `npm audit`.
+- Remove the self-referencing `md2blogger` from `devDependencies` in `package.json`.
+- Ensure all dependencies are correctly updated and `npm audit` reports 0 vulnerabilities.
 
 ## Non-Functional Requirements
-- Security: No known vulnerabilities in the final dependency tree.
-- Maintainability: Use modern dependency versions where possible.
-- Compatibility: Ensure the project still runs on supported Node.js versions.
+- Security: Zero known vulnerabilities in the dependency tree.
+- Functionality: All existing CLI commands (`--help`, conversion, etc.) must remain operational.
+- Stability: No regressions in core logic during dependency adjustments.
 
 ## Success Criteria
-- `npm audit` reports 0 vulnerabilities.
-- `md2blogger --help` runs successfully.
-- Basic conversion and authentication flows work (if testable).
+- `npm audit` returns 0 vulnerabilities.
+- `package.json` does not contain `md2blogger` in its own `devDependencies`.
+- `md2blogger --help` and a sample conversion run successfully.
